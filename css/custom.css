@@ -1033,3 +1033,95 @@ body {
   }
 
 }
+
+/* =========================================================
+   FIX TÊN CÔ DÂU - CHÚ RỂ Ở PHẦN LỜI MỜI
+   Hỗ trợ tên dài: Thành Đạt / Ngọc Diệp
+   ========================================================= */
+
+/* Khung chứa 2 tên */
+#GROUP3 {
+  width: 280px !important;
+  height: 150px !important;
+
+  top: 0 !important;
+  left: 58px !important;
+
+  overflow: visible !important;
+}
+
+
+/* Chú rể */
+#HEADLINE10 {
+  width: 280px !important;
+
+  top: -4px !important;
+  left: 0 !important;
+
+  z-index: 5 !important;
+}
+
+
+/* Cô dâu */
+#HEADLINE11 {
+  width: 280px !important;
+
+  top: 70px !important;
+  left: 0 !important;
+
+  z-index: 5 !important;
+}
+
+
+/* Cả hai tên */
+#HEADLINE10 > .ladi-headline,
+#HEADLINE11 > .ladi-headline {
+  font-family: "Alex Brush", cursive !important;
+
+  font-size: 46px !important;
+  line-height: 1.1 !important;
+
+  font-weight: 400 !important;
+
+  color: #a46b61 !important;
+
+  text-align: right !important;
+
+
+  /* QUAN TRỌNG:
+     không cho Thành Đạt / Ngọc Diệp tự xuống dòng */
+  white-space: nowrap !important;
+
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+
+  overflow: visible !important;
+}
+
+
+/* Hình chữ "and" + đường cong phía sau */
+#IMAGE12 {
+  width: 235px !important;
+  height: 98px !important;
+
+  top: 8px !important;
+  left: -21px !important;
+
+  z-index: 1 !important;
+
+  transform: scale(0.95);
+  transform-origin: left center;
+}
+
+#IMAGE12 > .ladi-image,
+#IMAGE12 > .ladi-image > .ladi-image-background {
+  width: 235px !important;
+  height: 98px !important;
+}
+
+
+/* Cho tên luôn nằm trên hình trang trí */
+#HEADLINE10,
+#HEADLINE11 {
+  position: absolute !important;
+}

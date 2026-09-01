@@ -18,6 +18,10 @@ window.WEDDING_CONFIG = {
     groom: "Đạt",
     bride: "Diệp",
   },
+  coupleName: {
+    groom: "Thành Đạt",
+    bride: "Ngọc Diệp",
+  },
 
   loveStoryTitle: "Chuyện tình",
   loveStory:
@@ -32,7 +36,7 @@ window.WEDDING_CONFIG = {
     year: "2026 ",
     time: "11:00",
     // Để trống "" nếu muốn website tự tính thứ từ ngày/tháng/năm.
-    weekday: "Thứ bai",
+    weekday: "Thứ hai",
     venueLabel: "Địa điểm",
     venue: "257 ấp tân hòa a, xã tân hiệp, tỉnh an giang",
     directions: "Chỉ đường",
@@ -86,7 +90,24 @@ window.WEDDING_CONFIG = {
   "assets/images/gallery-4.jpg",
   "assets/images/gallery-5.jpg",
   "assets/images/gallery-6.jpg",
-  "assets/images/gallery-7.jpg"
+  "assets/images/gallery-7.jpg",
+  "assets/images/gallery-8.jpg",
+  "assets/images/gallery-9.jpg",
+  "assets/images/gallery-10.jpg",
+  "assets/images/gallery-11.jpg",
+  "assets/images/gallery-12.jpg",
+  "assets/images/gallery-13.jpg",
+  "assets/images/gallery-14.jpg",
+  "assets/images/gallery-15.jpg",
+  "assets/images/gallery-16.jpg",
+  "assets/images/gallery-17.jpg",
+  "assets/images/gallery-18.jpg",
+  "assets/images/gallery-19.jpg",
+  "assets/images/gallery-20.jpg",
+  "assets/images/gallery-21.jpg",
+  "assets/images/gallery-22.jpg",
+  "assets/images/gallery-23.jpg",
+  "assets/images/gallery-24.jpg"
 ],
     footer: "",
     share: "",

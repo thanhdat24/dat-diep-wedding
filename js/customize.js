@@ -182,9 +182,9 @@
   }
 
   function applyCouple() {
-    const couple = c.couple || {};
-    const groom = asText(couple.groom).trim();
-    const bride = asText(couple.bride).trim();
+    const coupleName = c.coupleName || {};
+    const groom = asText(coupleName.groom).trim();
+    const bride = asText(coupleName.bride).trim();
 
     if (groom) {
       const lower = groom.toLocaleLowerCase("vi-VN");
