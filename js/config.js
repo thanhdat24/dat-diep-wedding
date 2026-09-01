@@ -34,7 +34,7 @@ window.WEDDING_CONFIG = {
     day: "16",
     month: "11",
     year: "2026 ",
-    time: "11:00",
+    time: "10:00",
     // Để trống "" nếu muốn website tự tính thứ từ ngày/tháng/năm.
     weekday: "Thứ hai",
     venueLabel: "Địa điểm",
