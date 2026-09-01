@@ -1,0 +1,1035 @@
+600&display=swap");
+
+/* Wedding Tone Hồng V2.7
+   Tối ưu để chạy độc lập không cần ladipagev3.min.js.
+   Mobile-first cho layout gốc 420px. */
+
+:root {
+  --rose-main: #a46b61;
+  --rose-dark: #7f5048;
+  --rose-soft: #fff6f3;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #fff;
+}
+
+.ladi-wraper {
+  max-width: 420px !important;
+  margin: 0 auto !important;
+}
+
+/* =========================================================
+   1) KHÔNG CÒN PHỤ THUỘC LADIPAGE RUNTIME
+   ========================================================= */
+.ladi-animation-hidden {
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+#IMAGE55,
+#GROUP43,
+#HEADLINE107,
+#HEADLINE108,
+#IMAGE55 > .ladi-image,
+#IMAGE55 .ladi-image-background {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* =========================================================
+   2) CHUYỆN TÌNH - tối ưu tiếng Việt
+   ========================================================= */
+#HEADLINE8 {
+  width: 260px !important;
+  top: 636px !important;
+  left: 8px !important;
+}
+
+#HEADLINE8 > .ladi-headline {
+  font-family: "Dancing Script", cursive !important;
+  font-weight: 500 !important;
+  font-size: 49px !important;
+  line-height: 1.08 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+#HEADLINE9 {
+  width: 252px !important;
+  top: 702px !important;
+  left: 18px !important;
+}
+
+#HEADLINE9 > .ladi-headline {
+  font-size: 13.5px !important;
+  line-height: 1.42 !important;
+  text-align: left !important;
+  letter-spacing: 0 !important;
+}
+
+/* Tách cột ngày bên phải khỏi nội dung Chuyện tình. */
+#HEADLINE104 {
+  left: 307px !important;
+}
+#HEADLINE103 {
+  left: 308px !important;
+}
+#HEADLINE7 {
+  left: 307px !important;
+}
+#LINE1 {
+  left: 329px !important;
+}
+#LINE2 {
+  left: 328px !important;
+}
+
+/* =========================================================
+   7) ẢNH CHUYỆN TÌNH
+   - tăng chiều cao để thấy chân rõ hơn
+   - chỉnh lại để thấy rõ mặt, không bị cắt đầu
+   ========================================================= */
+
+#SECTION2 {
+  --photo-extra: 230px;
+
+  /* giảm kéo lên để không bị che mặt */
+  --photo-shift-up: 8px;
+
+  height: calc(602.07px + var(--photo-extra)) !important;
+}
+
+/* ==============================
+   ẢNH CHÍNH
+   ============================== */
+#IMAGE14 {
+  width: 420px !important;
+  height: calc(210px + var(--photo-extra)) !important;
+  top: -201.6px !important;
+  left: 0 !important;
+}
+
+#IMAGE14 > .ladi-image {
+  border-radius: 6px !important;
+  overflow: hidden !important;
+}
+
+#IMAGE14 > .ladi-image > .ladi-image-background {
+  width: 420px !important;
+  height: calc(210px + var(--photo-extra)) !important;
+
+  /* trước đây kéo lên nhiều quá nên bị cắt mặt */
+  top: calc(0px - var(--photo-shift-up)) !important;
+  left: 0 !important;
+
+  background-size: cover !important;
+
+  /* ưu tiên thấy rõ khuôn mặt */
+  background-position: center 12% !important;
+}
+
+/* =========================================================
+   ĐẨY TOÀN BỘ NỘI DUNG PHÍA DƯỚI XUỐNG
+   ========================================================= */
+
+#HEADLINE12 {
+  top: calc(43.9px + var(--photo-extra)) !important;
+}
+
+#GROUP4 {
+  top: calc(92.4px + var(--photo-extra)) !important;
+}
+
+#GROUP30 {
+  top: calc(245.495px + var(--photo-extra)) !important;
+}
+
+#HEADLINE80 {
+  top: calc(357.245px + var(--photo-extra)) !important;
+}
+
+#GROUP5 {
+  top: calc(406.9px + var(--photo-extra)) !important;
+}
+
+#HEADLINE105 {
+  top: calc(430.733px + var(--photo-extra)) !important;
+}
+
+#HEADLINE106 {
+  top: calc(430.733px + var(--photo-extra)) !important;
+}
+
+#GROUP33 {
+  top: calc(517.203px + var(--photo-extra)) !important;
+}
+
+/* =========================================================
+   4) BỎ TIMELINE + DRESSCODE
+   ========================================================= */
+#SECTION4 {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+#SECTION4 * {
+  animation: none !important;
+}
+
+/* =========================================================
+   5) THAY HÌNH LÁ BẰNG TRÁI TIM
+   ========================================================= */
+#IMAGE47 > .ladi-image > .ladi-image-background {
+  background-image: none !important;
+}
+
+#IMAGE47 {
+  width: 152px !important;
+  height: 152px !important;
+}
+
+#IMAGE47::before {
+  content: "❤";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 108px;
+  line-height: 1;
+  color: rgb(181, 96, 105);
+  text-shadow: 0 10px 26px rgba(181, 96, 105, 0.22);
+  pointer-events: none;
+}
+
+/* =========================================================
+   6) BỎ RSVP / POPUP XÁC NHẬN
+   ========================================================= */
+#GROUP19,
+#BOX15,
+#FORM2,
+#POPUP2,
+#backdrop-popup {
+  display: none !important;
+}
+
+#SECTION_POPUP {
+  height: 0 !important;
+  min-height: 0 !important;
+}
+
+/* =========================================================
+   7) NÚT CHỈ ĐƯỜNG
+   ========================================================= */
+#GROUP33 {
+  cursor: pointer !important;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* =========================================================
+   8) ALBUM - bỏ ảnh nền sau, giữ 1 ảnh chính + tiêu đề phía trên
+   ========================================================= */
+#SECTION9 {
+  height: 1630px !important;
+}
+
+/* IMAGE53 là lá trang trí, IMAGE54 là ảnh ngang phía sau. */
+#IMAGE53,
+#IMAGE54 {
+  display: none !important;
+}
+
+#GROUP42 {
+  width: 420px !important;
+  height: 530px !important;
+  top: 190px !important;
+  left: 0 !important;
+}
+
+#IMAGE55 {
+  display: block !important;
+  width: 330px !important;
+  height: 500px !important;
+  top: 30px !important;
+  left: 45px !important;
+}
+
+#IMAGE55 > .ladi-image {
+  display: block !important;
+  width: 330px !important;
+  height: 500px !important;
+  border-radius: 44px !important;
+  overflow: hidden !important;
+  box-shadow: 0 12px 28px rgba(88, 62, 57, 0.12);
+}
+
+#IMAGE55 > .ladi-image > .ladi-image-background {
+  display: block !important;
+  width: 330px !important;
+  height: 500px !important;
+  top: 0 !important;
+  left: 0 !important;
+  background-size: cover !important;
+  background-position: center top !important;
+}
+
+#GROUP43 {
+  display: block !important;
+  width: 420px !important;
+  height: 135px !important;
+  top: -145px !important;
+  left: 0 !important;
+  pointer-events: none !important;
+}
+
+#HEADLINE107,
+#HEADLINE108 {
+  width: 420px !important;
+  left: 0 !important;
+}
+
+#HEADLINE107 {
+  top: 0 !important;
+}
+
+#HEADLINE107 > .ladi-headline {
+  font-family: "Alex Brush", cursive !important;
+  font-size: 64px !important;
+  font-weight: 400 !important;
+  line-height: 1.05 !important;
+  color: var(--rose-main) !important;
+  text-align: center !important;
+  text-transform: none !important;
+}
+
+#HEADLINE108 {
+  top: 78px !important;
+}
+
+#HEADLINE108 > .ladi-headline {
+  font-family: "Roboto Slab", serif !important;
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 5px !important;
+  color: var(--rose-main) !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+}
+
+#IMAGE56 {
+  width: 420px !important;
+  height: 800px !important;
+  top: 760px !important;
+  left: 0 !important;
+}
+
+#GALLERY2 {
+  width: 420px !important;
+  height: 730px !important;
+  top: 790px !important;
+  left: 0 !important;
+  visibility: visible !important;
+}
+
+#GALLERY2 .ladi-gallery-view {
+  touch-action: pan-y;
+  contain: paint;
+}
+
+#GALLERY2 .ladi-gallery-view-item {
+  transition: none !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  will-change: auto !important;
+}
+
+#GALLERY2 .ladi-gallery-control {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
+}
+
+#GALLERY2 .ladi-gallery-control::-webkit-scrollbar {
+  display: none;
+}
+
+#GALLERY2 .ladi-gallery-control-box {
+  display: flex !important;
+  left: 0 !important;
+  width: max-content !important;
+  transition: none !important;
+}
+
+#GALLERY2 .ladi-gallery-control-item {
+  flex: 0 0 auto !important;
+  opacity: 0.72;
+  filter: none !important;
+  transition: opacity 120ms ease !important;
+}
+
+#GALLERY2 .ladi-gallery-control-item.selected {
+  opacity: 1;
+}
+
+#GALLERY2 .ladi-gallery-view-arrow {
+  opacity: 1 !important;
+  visibility: visible !important;
+  touch-action: manipulation;
+}
+
+/* =========================================================
+   9) CẢM ƠN - Alex Brush
+   ========================================================= */
+#HEADLINE100 > .ladi-headline,
+#HEADLINE88 > .ladi-headline,
+#HEADLINE90 > .ladi-headline {
+  font-family: "Alex Brush", cursive !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+}
+
+#HEADLINE100 > .ladi-headline {
+  font-size: 48px !important;
+  line-height: 1.3 !important;
+}
+
+#HEADLINE88 > .ladi-headline {
+  font-size: 42px !important;
+  line-height: 1.35 !important;
+}
+
+/* =========================================================
+   10) FOOTER - ảnh full người
+   ========================================================= */
+#SECTION7 {
+  height: 700px !important;
+}
+
+#IMAGE42,
+#IMAGE42 > .ladi-image > .ladi-image-background {
+  height: 700px !important;
+}
+
+#IMAGE43 {
+  top: 58px !important;
+  left: 0 !important;
+  width: 420px !important;
+  height: 590px !important;
+}
+
+#IMAGE43 > .ladi-image {
+  border-top-left-radius: 72px !important;
+  filter: brightness(88%) !important;
+}
+
+#IMAGE43 > .ladi-image > .ladi-image-background {
+  width: 420px !important;
+  height: 590px !important;
+  top: 0 !important;
+  left: 0 !important;
+  background-size: cover !important;
+  background-position: center top !important;
+}
+
+#HEADLINE90 {
+  width: 420px !important;
+  top: 570px !important;
+  left: 0 !important;
+}
+
+#HEADLINE90 > .ladi-headline {
+  font-size: 56px !important;
+  line-height: 1.25 !important;
+  text-align: center !important;
+  color: #fff !important;
+}
+
+/* =========================================================
+   11) NÚT NHẠC - nhẹ hơn, không animation vô hạn
+   ========================================================= */
+#music-toggle {
+  position: fixed;
+  right: calc(16px + env(safe-area-inset-right));
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  cursor: pointer;
+  color: var(--rose-soft);
+  background: linear-gradient(135deg, #b77f75, var(--rose-dark));
+  box-shadow: 0 8px 22px rgba(95, 57, 51, 0.28);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: transform 140ms ease, box-shadow 140ms ease, opacity 140ms ease;
+}
+
+#music-toggle:active {
+  transform: scale(0.94);
+}
+
+#music-toggle.playing {
+  box-shadow: 0 0 0 6px rgba(164, 107, 97, 0.15),
+    0 8px 22px rgba(95, 57, 51, 0.34);
+}
+
+#music-toggle.music-error {
+  opacity: 0.62;
+}
+
+#music-icon {
+  width: 29px;
+  height: 29px;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+#music-slash {
+  position: absolute;
+  width: 33px;
+  height: 2.5px;
+  border-radius: 20px;
+  transform: rotate(45deg);
+  background: rgba(255, 255, 255, 0.94);
+  pointer-events: none;
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+#music-toggle.playing #music-slash {
+  opacity: 0;
+  transform: rotate(45deg) scale(0.7);
+}
+
+#wedding-music {
+  display: none !important;
+}
+
+/* =========================================================
+   12) COPY + MOBILE + ACCESSIBILITY
+   ========================================================= */
+.ladi-headline,
+.ladi-paragraph {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+@media (max-width: 419px) {
+  #music-toggle {
+    right: calc(12px + env(safe-area-inset-right));
+    bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+.ladi-wraper {
+  width: 420px !important;
+  max-width: 420px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 419px) {
+  .ladi-wraper {
+    transform-origin: top center !important;
+  }
+}
+
+/* =========================================================
+   FIX UI V2.7 - lịch, nút nhạc, chuyện tình, chỉ đường, tim
+   Dán ở CUỐI custom.css
+   ========================================================= */
+
+/* 1) CHUYỆN TÌNH - canh đều đẹp hơn */
+#HEADLINE9 {
+  width: 255px !important;
+  left: 18px !important;
+}
+
+#HEADLINE9 > .ladi-headline {
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+  text-align: justify !important;
+  text-justify: inter-word !important;
+  letter-spacing: 0 !important;
+  word-break: break-word !important;
+}
+
+/* 2) LỊCH - sửa trái tim ngày cưới bị mẻ / lệch */
+/* =========================================================
+   TIM NGÀY CƯỚI TRONG LỊCH
+   Không khóa left/top vì JS sẽ tự đặt theo ngày cưới
+   ========================================================= */
+
+#SHAPE1 {
+  width: 30.5869px !important;
+  height: 32.3634px !important;
+
+  overflow: visible !important;
+
+  z-index: 1 !important;
+
+  pointer-events: none !important;
+  
+    animation: calendarHeartBeat 1.2s ease-in-out infinite;
+  transform-origin: center center !important;
+}
+
+#SHAPE1 .ladi-shape,
+#SHAPE1 svg {
+  overflow: visible !important;
+}
+
+#SHAPE1 svg:last-child {
+  fill: #ffffff !important;
+
+  filter:
+    drop-shadow(
+      0 3px 7px
+      rgba(0, 0, 0, 0.12)
+    );
+}
+
+
+/* Số ngày phải nằm phía trên trái tim */
+#GROUP21
+> .ladi-group
+> [id^="HEADLINE"] {
+  z-index: 2 !important;
+}
+
+#SHAPE1 .ladi-shape,
+#SHAPE1 svg {
+  overflow: visible !important;
+}
+
+#SHAPE1 svg:last-child {
+  fill: #ffffff !important;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12));
+  transform: scale(1.02);
+  transform-origin: center;
+}
+
+/* Nếu số 17 nằm trên tim thì cho nó nổi lên hơn */
+#GROUP21 .ladi-element {
+  z-index: 3;
+}
+
+/* 3) NÚT ÂM THANH - giữ màu hồng nâu như trước, dễ nhìn hơn */
+#music-toggle {
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, #bb847a, #a46b61) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 26px rgba(164, 107, 97, 0.32) !important;
+  opacity: 1 !important;
+}
+
+#music-toggle:hover {
+  transform: translateY(-1px);
+}
+
+#music-toggle:active {
+  transform: scale(0.95);
+}
+
+#music-toggle.playing {
+  background: linear-gradient(135deg, #bb847a, #a46b61) !important;
+  color: #ffffff !important;
+  box-shadow:
+    0 0 0 6px rgba(164, 107, 97, 0.16),
+    0 10px 26px rgba(164, 107, 97, 0.34) !important;
+}
+
+#music-toggle.music-error {
+  background: linear-gradient(135deg, #bb847a, #a46b61) !important;
+  opacity: 0.9 !important;
+}
+
+#music-icon {
+  width: 29px !important;
+  height: 29px !important;
+  color: #ffffff !important;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.18));
+}
+
+#music-slash {
+  background: rgba(255, 255, 255, 0.98) !important;
+}
+
+/* 4) CHỈ ĐƯỜNG - làm nổi hơn */
+#GROUP33 {
+  width: 126px !important;
+  left: 147px !important;
+  cursor: pointer !important;
+}
+
+#GROUP33 .ladi-group {
+  animation: mapFloat 2.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+#SHAPE2 {
+  width: 18px !important;
+  height: 30px !important;
+  left: 54px !important;
+  filter: drop-shadow(0 4px 12px rgba(164, 107, 97, 0.18));
+}
+
+#SHAPE2 svg:last-child {
+  fill: #a46b61 !important;
+}
+
+#HEADLINE95 {
+  width: 126px !important;
+  left: 0 !important;
+}
+
+#HEADLINE95 > .ladi-headline {
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.4px !important;
+  text-align: center !important;
+  color: #a46b61 !important;
+  text-shadow: 0 3px 10px rgba(164, 107, 97, 0.14);
+}
+
+/* 5) TRÁI TIM CHỈ ĐƯỜNG - nổi hơn và đập đập */
+#IMAGE47 {
+  width: 160px !important;
+  height: 160px !important;
+  left: 130px !important;
+  filter: drop-shadow(0 10px 24px rgba(181, 96, 105, 0.22));
+  animation: heartBeat 1.35s ease-in-out infinite;
+  transform-origin: center;
+}
+
+#IMAGE47 > .ladi-image > .ladi-image-background {
+  background-image: none !important;
+}
+
+#IMAGE47::before {
+  content: "❤";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 114px !important;
+  line-height: 1;
+  color: #c4687a !important;
+  text-shadow: 0 10px 26px rgba(196, 104, 122, 0.22);
+  pointer-events: none;
+}
+
+/* 6) ANIMATION */
+@keyframes heartBeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.10);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.10);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+@keyframes mapFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+#SHAPE1 .ladi-shape,
+#SHAPE1 svg {
+  overflow: visible !important;
+}
+
+#SHAPE1 svg:last-child {
+  fill: #ffffff !important;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.14));
+}
+
+@keyframes calendarHeartBeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.18);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.14);
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================================================
+   COUNTDOWN NGÀY CƯỚI
+   ========================================================= */
+
+#SECTION_COUNTDOWN {
+  position: relative;
+  width: 420px;
+  height: 205px;
+
+  margin: 0 auto;
+
+  background:
+    url("../assets/images/texture.jpg")
+    center / cover no-repeat;
+
+  overflow: hidden;
+}
+
+
+/*
+  Nếu không có texture.jpg,
+  dùng nền trắng:
+*/
+#SECTION_COUNTDOWN {
+  background-color: #fff;
+}
+
+
+.countdown-inner {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 27px 18px 20px;
+
+  text-align: center;
+
+  color: #a46b61;
+}
+
+
+.countdown-small {
+  font-size: 10px;
+
+  line-height: 1.4;
+
+  font-weight: 600;
+
+  letter-spacing: 2.4px;
+
+  text-transform: uppercase;
+
+  opacity: 0.75;
+}
+
+
+.countdown-title {
+  margin-top: 2px;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 39px;
+
+  line-height: 1.2;
+
+  font-weight: 500;
+}
+
+
+.countdown-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 8px
+    1fr 8px
+    1fr 8px
+    1fr;
+
+  align-items: start;
+
+  width: 100%;
+
+  margin-top: 18px;
+}
+
+
+.countdown-item {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  min-width: 0;
+}
+
+
+.countdown-number {
+  display: block;
+
+  min-width: 50px;
+
+  font-family:
+    "Roboto Slab",
+    serif;
+
+  font-size: 29px;
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  color: #a46b61;
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+.countdown-label {
+  margin-top: 10px;
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  color: #a46b61;
+}
+
+
+.countdown-separator {
+  padding-top: 3px;
+
+  font-family:
+    "Roboto Slab",
+    serif;
+
+  font-size: 23px;
+
+  line-height: 1;
+
+  color: rgba(
+    164,
+    107,
+    97,
+    0.55
+  );
+}
+
+
+/* đường trang trí */
+.countdown-inner::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 18px;
+
+  width: 65px;
+  height: 1px;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    rgba(
+      164,
+      107,
+      97,
+      0.45
+    );
+}
+
+
+/* MOBILE */
+@media (max-width: 419px) {
+
+  #SECTION_COUNTDOWN {
+    width: 420px;
+  }
+
+}
+
+
+/* Accessibility */
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
+
+  #SECTION_COUNTDOWN * {
+    animation: none !important;
+  }
+
+}

@@ -1,0 +1,108 @@
+window.WEDDING_CONFIG = {
+  version: "2.7.0",
+
+  site: {
+    title: "Thiệp cưới Thành Đạt & Ngọc Diệp | 17.11.2026",
+    description:
+      "Trân trọng mời bạn đến chung vui trong lễ thành hôn của Thành Đạt và Ngọc Diệp vào ngày 17/11/2026 tại TRUNG TÂM HỘI NGHỊ TIỆC CƯỚI VẠN PHÁT RIVERSIDE (Sảnh 3)",
+
+    // Sau khi deploy Vercel, điền URL thật vào đây.
+    // Ví dụ: "https://dat-diep-wedding.vercel.app"
+    url: "https://wedding-tone-hong.vercel.app/",
+
+    image:
+      "",
+  },
+
+  couple: {
+    groom: "Đạt",
+    bride: "Diệp",
+  },
+
+  loveStoryTitle: "Chuyện tình",
+  loveStory:
+    "Từ một cuộc gặp gỡ tình cờ, chúng mình đã tìm thấy nhau giữa bao người. Tình yêu lớn dần qua những sẻ chia, tin tưởng và những ngày bình dị bên nhau. Hôm nay, chúng mình cùng viết tiếp câu chuyện ấy bằng một lời hẹn ước trăm năm.",
+
+  invitation:
+    "Chúng mình rất hân hạnh khi được đón bạn đến chung vui trong lễ thành hôn của hai đứa.",
+
+  wedding: {
+    day: "16",
+    month: "11",
+    year: "2026 ",
+    time: "11:00",
+    // Để trống "" nếu muốn website tự tính thứ từ ngày/tháng/năm.
+    weekday: "Thứ bai",
+    venueLabel: "Địa điểm",
+    venue: "257 ấp tân hòa a, xã tân hiệp, tỉnh an giang",
+    directions: "Chỉ đường",
+	countdownTo:
+    "2026-11-16T17:30:00+07:00",
+   // mapUrl: "https://maps.app.goo.gl/yVmR2QHrD4ACBni57",
+   mapUrl: "https://www.google.com/maps/place/10%C2%B007'43.0%22N+105%C2%B016'16.0%22E/@10.1286144,105.2711038,820m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d10.1286144!4d105.2711038?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+
+  families: {
+    brideTitle: "Gia đình nhà gái",
+    bride: ["Ông: ", "Bà: "],
+    groomTitle: "Gia đình nhà trai",
+    groom: ["Ông: ", "Bà: "],
+  },
+
+  calendar: {
+    monthPrefix: "Tháng",
+    weekdays: ["T2", "T3", "T4", "T5", "T6", "T7", "CN"],
+  },
+
+  album: {
+    first: "Album",
+    second: "Ảnh cưới",
+  },
+
+  thankYouTitle: "Cảm ơn bạn!",
+  thankYouText:
+    "Chúng mình thật sự hạnh phúc khi có thể gửi đến bạn tấm thiệp cưới này.<br><br>Hy vọng sẽ được đón tiếp bạn trong ngày vui để cùng chia sẻ những khoảnh khắc đáng nhớ và gửi đến chúng mình những lời chúc tốt đẹp nhất.<br><br>Sự hiện diện của bạn là niềm vinh hạnh và là món quà ý nghĩa đối với hai đứa.",
+  signoff: "Thân mến,",
+
+  /*
+    Ảnh để trống = giữ ảnh đang có sẵn trong index.html.
+    Khi dùng ảnh local, chỉ cần điền đường dẫn. Ví dụ:
+      cover: "assets/images/cover.webp"
+      albumCover: "assets/images/album-cover.webp"
+      gallery: ["assets/images/gallery-1.webp", ...]
+
+    Gallery nếu để [] sẽ tự lấy các ảnh gallery có sẵn trong index.html.
+  */
+  images: {
+    cover: "",
+    invitation: "",
+    calendar: "",
+    albumIntro: "",
+    albumCover: "",
+    gallery: [
+  "assets/images/gallery-1.jpg",
+  "assets/images/gallery-2.jpg",
+  "assets/images/gallery-3.jpg",
+  "assets/images/gallery-4.jpg",
+  "assets/images/gallery-5.jpg",
+  "assets/images/gallery-6.jpg",
+  "assets/images/gallery-7.jpg"
+],
+    footer: "",
+    share: "",
+  },
+
+  music: {
+    enabled: true,
+
+    // Hiện dùng link nhạc cũ. Khi có file local, nên đổi thành:
+    // track: "assets/audio/wedding.mp3",
+    track: "https://files.catbox.moe/bcba42.mp3",
+
+    // Có thể thêm file local làm dự phòng sau khi bạn chép MP3 vào project.
+    fallbackTrack: "",
+    volume: 0.65,
+    loop: true,
+    startOnFirstGesture: true,
+  },
+};
