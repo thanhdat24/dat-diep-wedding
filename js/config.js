@@ -48,9 +48,9 @@ window.WEDDING_CONFIG = {
 
   families: {
     brideTitle: "Gia đình nhà gái",
-    bride: ["Ông: ", "Bà: "],
+    bride: ["Ông: Trần Thiện Sử", "Bà: Nguyễn Thị Cẩm Vân"],
     groomTitle: "Gia đình nhà trai",
-    groom: ["Ông: ", "Bà: "],
+    groom: ["Ông: Lê Thành Sang", "Bà: Phạm Thị Ngọc Diệu"],
   },
 
   calendar: {
