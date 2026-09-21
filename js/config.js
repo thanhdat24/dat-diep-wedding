@@ -4,14 +4,13 @@ window.WEDDING_CONFIG = {
   site: {
     title: "Thiệp cưới Thành Đạt & Ngọc Diệp | 17.11.2026",
     description:
-      "Trân trọng mời bạn đến chung vui trong lễ thành hôn của Thành Đạt và Ngọc Diệp vào ngày 17/11/2026 tại TRUNG TÂM HỘI NGHỊ TIỆC CƯỚI VẠN PHÁT RIVERSIDE (Sảnh 3)",
+      "Trân trọng mời bạn đến chung vui trong lễ vu quy của Thành Đạt và Ngọc Diệp vào ngày 17/11/2026 tại TRUNG TÂM HỘI NGHỊ TIỆC CƯỚI VẠN PHÁT RIVERSIDE (Sảnh 3)",
 
     // Sau khi deploy Vercel, điền URL thật vào đây.
     // Ví dụ: "https://dat-diep-wedding.vercel.app"
     url: "https://wedding-tone-hong.vercel.app/",
 
-    image:
-      "",
+    image: "",
   },
 
   couple: {
@@ -25,10 +24,9 @@ window.WEDDING_CONFIG = {
 
   loveStoryTitle: "Chuyện tình",
   loveStory:
-    "Từ một cuộc gặp gỡ tình cờ, chúng mình đã tìm thấy nhau giữa bao người. Tình yêu lớn dần qua những sẻ chia, tin tưởng và những ngày bình dị bên nhau. Hôm nay, chúng mình cùng viết tiếp câu chuyện ấy bằng một lời hẹn ước trăm năm.",
-
+    'Chẳng biết từ khi nào, những điều tình cờ đã trở thành quen thuộc, và một người xa lạ đã trở thành người thương. Sau 5 năm bên nhau, hôm nay chúng mình chọn nắm tay nhau bước vào một hành trình mới – <span class="story-highlight">hành trình mang tên gia đình</span>.',
   invitation:
-    "Chúng mình rất hân hạnh khi được đón bạn đến chung vui trong lễ thành hôn của hai đứa.",
+    "Chúng mình rất hân hạnh khi được đón bạn đến chung vui trong lễ vu quy của hai đứa.",
 
   wedding: {
     day: "16",
@@ -40,10 +38,10 @@ window.WEDDING_CONFIG = {
     venueLabel: "Địa điểm",
     venue: "257 ấp tân hòa a, xã tân hiệp, tỉnh an giang",
     directions: "Chỉ đường",
-	countdownTo:
-    "2026-11-16T17:30:00+07:00",
-   // mapUrl: "https://maps.app.goo.gl/yVmR2QHrD4ACBni57",
-   mapUrl: "https://www.google.com/maps/place/10%C2%B007'43.0%22N+105%C2%B016'16.0%22E/@10.1286144,105.2711038,820m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d10.1286144!4d105.2711038?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+    countdownTo: "2026-11-16T17:30:00+07:00",
+    // mapUrl: "https://maps.app.goo.gl/yVmR2QHrD4ACBni57",
+    mapUrl:
+      "https://www.google.com/maps/place/10%C2%B007'43.0%22N+105%C2%B016'16.0%22E/@10.1286144,105.2711038,820m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d10.1286144!4d105.2711038?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
   },
 
   families: {
@@ -84,31 +82,31 @@ window.WEDDING_CONFIG = {
     albumIntro: "",
     albumCover: "",
     gallery: [
-  "assets/images/gallery-1.jpg",
-  "assets/images/gallery-2.jpg",
-  "assets/images/gallery-3.jpg",
-  "assets/images/gallery-4.jpg",
-  "assets/images/gallery-5.jpg",
-  "assets/images/gallery-6.jpg",
-  "assets/images/gallery-7.jpg",
-  "assets/images/gallery-8.jpg",
-  "assets/images/gallery-9.jpg",
-  "assets/images/gallery-10.jpg",
-  "assets/images/gallery-11.jpg",
-  "assets/images/gallery-12.jpg",
-  "assets/images/gallery-13.jpg",
-  "assets/images/gallery-14.jpg",
-  "assets/images/gallery-15.jpg",
-  "assets/images/gallery-16.jpg",
-  "assets/images/gallery-17.jpg",
-  "assets/images/gallery-18.jpg",
-  "assets/images/gallery-19.jpg",
-  "assets/images/gallery-20.jpg",
-  "assets/images/gallery-21.jpg",
-  "assets/images/gallery-22.jpg",
-  "assets/images/gallery-23.jpg",
-  "assets/images/gallery-24.jpg"
-],
+      "assets/images/gallery-1.webp",
+      "assets/images/gallery-2.webp",
+      "assets/images/gallery-3.webp",
+      "assets/images/gallery-4.webp",
+      "assets/images/gallery-5.webp",
+      "assets/images/gallery-6.webp",
+      "assets/images/gallery-7.webp",
+      "assets/images/gallery-8.webp",
+      "assets/images/gallery-9.webp",
+      "assets/images/gallery-10.webp",
+      "assets/images/gallery-11.webp",
+      "assets/images/gallery-12.webp",
+      "assets/images/gallery-13.webp",
+      "assets/images/gallery-14.webp",
+      "assets/images/gallery-15.webp",
+      "assets/images/gallery-16.webp",
+      "assets/images/gallery-17.webp",
+      "assets/images/gallery-18.webp",
+      "assets/images/gallery-19.webp",
+      "assets/images/gallery-20.webp",
+      "assets/images/gallery-21.webp",
+      "assets/images/gallery-22.webp",
+      "assets/images/gallery-23.webp",
+      "assets/images/gallery-24.webp",
+    ],
     footer: "",
     share: "",
   },

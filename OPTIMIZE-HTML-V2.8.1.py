@@ -241,7 +241,7 @@ fallbacks = {
     "HEADLINE108": "Ảnh cưới",
     "HEADLINE86": "",
     "HEADLINE87": "Thân mến,<br>",
-    "HEADLINE100": "Cảm ơn bạn!<br>",
+    "HEADLINE100": "Thank You!<br>",
     "HEADLINE90": "Cảm ơn bạn!",
 }
 for element_id, value in fallbacks.items():

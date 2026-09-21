@@ -591,6 +591,15 @@ body {
   left: 18px !important;
 }
 
+#HEADLINE9 .story-highlight {
+  font-weight: 700;
+  color: #a87467;
+  font-style: italic;
+  background: linear-gradient(transparent 65%, rgba(168, 116, 103, 0.18) 65%);
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
 #HEADLINE9 > .ladi-headline {
   font-size: 13.5px !important;
   line-height: 1.6 !important;
@@ -1105,7 +1114,7 @@ body {
   height: 98px !important;
 
   top: 8px !important;
-  left: -21px !important;
+  left: -30px !important;
 
   z-index: 1 !important;
 

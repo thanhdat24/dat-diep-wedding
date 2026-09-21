@@ -4,13 +4,37 @@
   const c = window.WEDDING_CONFIG || {};
 
   const DAY_IDS = [
-    "HEADLINE54", "HEADLINE24", "HEADLINE25", "HEADLINE26", "HEADLINE27",
-    "HEADLINE28", "HEADLINE29", "HEADLINE30", "HEADLINE31", "HEADLINE32",
-    "HEADLINE33", "HEADLINE34", "HEADLINE35", "HEADLINE36", "HEADLINE37",
-    "HEADLINE38", "HEADLINE39", "HEADLINE40", "HEADLINE41", "HEADLINE42",
-    "HEADLINE43", "HEADLINE44", "HEADLINE45", "HEADLINE48", "HEADLINE46",
-    "HEADLINE47", "HEADLINE49", "HEADLINE50", "HEADLINE51", "HEADLINE52",
-    "HEADLINE53"
+    "HEADLINE54",
+    "HEADLINE24",
+    "HEADLINE25",
+    "HEADLINE26",
+    "HEADLINE27",
+    "HEADLINE28",
+    "HEADLINE29",
+    "HEADLINE30",
+    "HEADLINE31",
+    "HEADLINE32",
+    "HEADLINE33",
+    "HEADLINE34",
+    "HEADLINE35",
+    "HEADLINE36",
+    "HEADLINE37",
+    "HEADLINE38",
+    "HEADLINE39",
+    "HEADLINE40",
+    "HEADLINE41",
+    "HEADLINE42",
+    "HEADLINE43",
+    "HEADLINE44",
+    "HEADLINE45",
+    "HEADLINE48",
+    "HEADLINE46",
+    "HEADLINE47",
+    "HEADLINE49",
+    "HEADLINE50",
+    "HEADLINE51",
+    "HEADLINE52",
+    "HEADLINE53",
   ];
 
   const COL_LEFT = [0, 53.9178, 107.835, 161.748, 215.663, 269.58, 323.497];
@@ -26,7 +50,9 @@
   }
 
   function q(id, selector) {
-    return document.querySelector("#" + id + " " + (selector || ".ladi-headline"));
+    return document.querySelector(
+      "#" + id + " " + (selector || ".ladi-headline"),
+    );
   }
 
   function setHtml(id, html, selector) {
@@ -51,7 +77,7 @@
     el.style.setProperty(
       "background-image",
       'url("' + cssUrl(src) + '")',
-      "important"
+      "important",
     );
   }
 
@@ -94,8 +120,13 @@
 
   function getVietnameseWeekday(date) {
     return [
-      "Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư",
-      "Thứ năm", "Thứ sáu", "Thứ bảy"
+      "Chủ nhật",
+      "Thứ hai",
+      "Thứ ba",
+      "Thứ tư",
+      "Thứ năm",
+      "Thứ sáu",
+      "Thứ bảy",
     ][date.getUTCDay()];
   }
 
@@ -142,15 +173,27 @@
     const groom = asText(couple.groom).trim();
     const bride = asText(couple.bride).trim();
 
-    const title = asText(site.title).trim() ||
-      (groom || bride ? "Thiệp cưới " + groom + (groom && bride ? " & " : "") + bride : "Thiệp cưới");
-
-    const description = asText(site.description).trim() ||
+    const title =
+      asText(site.title).trim() ||
       (groom || bride
-        ? "Trân trọng kính mời bạn đến chung vui cùng " + groom +
-          (groom && bride ? " & " : "") + bride +
+        ? "Thiệp cưới " + groom + (groom && bride ? " & " : "") + bride
+        : "Thiệp cưới");
+
+    const description =
+      asText(site.description).trim() ||
+      (groom || bride
+        ? "Trân trọng kính mời bạn đến chung vui cùng " +
+          groom +
+          (groom && bride ? " & " : "") +
+          bride +
           (wedding.day && wedding.month && wedding.year
-            ? " vào ngày " + wedding.day + "/" + wedding.month + "/" + wedding.year + "."
+            ? " vào ngày " +
+              wedding.day +
+              "/" +
+              wedding.month +
+              "/" +
+              wedding.year +
+              "."
             : ".")
         : "");
 
@@ -189,12 +232,12 @@
     if (groom) {
       const lower = groom.toLocaleLowerCase("vi-VN");
       setText("HEADLINE3", lower);
-      setText("HEADLINE10", lower);
+      setText("HEADLINE11", lower);
     }
     if (bride) {
       const lower = bride.toLocaleLowerCase("vi-VN");
       setText("HEADLINE4", lower);
-      setText("HEADLINE11", lower);
+      setText("HEADLINE10", lower);
     }
     if (groom || bride) {
       setHtml("HEADLINE88", groom + " &amp; " + bride + "<br>");
@@ -202,9 +245,9 @@
   }
 
   function applyStoryAndInvitation() {
-    if (c.loveStoryTitle) setHtml("HEADLINE8", c.loveStoryTitle + "<br>");
-    if (c.loveStory) setHtml("HEADLINE9", c.loveStory + "<br>");
-    if (c.invitation) setHtml("HEADLINE12", c.invitation + "<br>");
+    if (c.loveStoryTitle) setHtml("HEADLINE8", c.loveStoryTitle);
+    if (c.loveStory) setHtml("HEADLINE9", c.loveStory);
+    if (c.invitation) setHtml("HEADLINE12", c.invitation);
   }
 
   function applyDateSummary() {
@@ -229,7 +272,8 @@
     const info = validWeddingDate();
 
     if (info) {
-      const weekday = asText(w.weekday).trim() || getVietnameseWeekday(info.date);
+      const weekday =
+        asText(w.weekday).trim() || getVietnameseWeekday(info.date);
       const time = asText(w.time).trim();
       const timeLine = [time, weekday].filter(Boolean).join(", ");
       if (timeLine) setHtml("HEADLINE13", timeLine + "<br>");
@@ -238,7 +282,10 @@
     const venueLabel = asText(w.venueLabel, "Địa điểm").trim();
     const venue = asText(w.venue).trim();
     if (venueLabel || venue) {
-      setHtml("HEADLINE80", venueLabel + (venueLabel && venue ? "<br>" : "") + venue + "<br>");
+      setHtml(
+        "HEADLINE80",
+        venueLabel + (venueLabel && venue ? "<br>" : "") + venue + "<br>",
+      );
     }
 
     if (w.directions) setHtml("HEADLINE95", w.directions + "<br>");
@@ -248,8 +295,16 @@
       const mm = String(info.month).padStart(2, "0");
       setHtml(
         "PARAGRAPH1",
-        venue + "<br>Tiệc cưới: " + asText(w.time).trim() + ", ngày " + dd + "/" + mm + "/" + info.year,
-        ".ladi-paragraph"
+        venue +
+          "<br>Tiệc cưới: " +
+          asText(w.time).trim() +
+          ", ngày " +
+          dd +
+          "/" +
+          mm +
+          "/" +
+          info.year,
+        ".ladi-paragraph",
       );
     }
 
@@ -270,16 +325,22 @@
     if (f.brideTitle || brideLines.length) {
       setHtml(
         "HEADLINE105",
-        '<span style="font-weight:bold;">' + asText(f.brideTitle, "Gia đình nhà gái") +
-          "</span><br>" + brideLines.join("<br>") + "<br>"
+        '<span style="font-weight:bold;">' +
+          asText(f.brideTitle, "Gia đình nhà gái") +
+          "</span><br>" +
+          brideLines.join("<br>") +
+          "<br>",
       );
     }
 
     if (f.groomTitle || groomLines.length) {
       setHtml(
         "HEADLINE106",
-        '<span style="font-weight:bold;">' + asText(f.groomTitle, "Gia đình nhà trai") +
-          "</span><br>" + groomLines.join("<br>") + "<br>"
+        '<span style="font-weight:bold;">' +
+          asText(f.groomTitle, "Gia đình nhà trai") +
+          "</span><br>" +
+          groomLines.join("<br>") +
+          "<br>",
       );
     }
   }
@@ -289,9 +350,10 @@
     if (!info) return;
 
     const calendar = c.calendar || {};
-    const weekdays = Array.isArray(calendar.weekdays) && calendar.weekdays.length === 7
-      ? calendar.weekdays
-      : ["T2", "T3", "T4", "T5", "T6", "T7", "CN"];
+    const weekdays =
+      Array.isArray(calendar.weekdays) && calendar.weekdays.length === 7
+        ? calendar.weekdays
+        : ["T2", "T3", "T4", "T5", "T6", "T7", "CN"];
 
     weekdays.forEach(function (label, i) {
       setText("HEADLINE" + (17 + i), label);
@@ -300,8 +362,12 @@
     const prefix = asText(calendar.monthPrefix, "Tháng").trim() || "Tháng";
     setText("HEADLINE16", prefix + " " + info.month);
 
-    const daysInMonth = new Date(Date.UTC(info.year, info.month, 0)).getUTCDate();
-    const jsFirstDay = new Date(Date.UTC(info.year, info.month - 1, 1)).getUTCDay();
+    const daysInMonth = new Date(
+      Date.UTC(info.year, info.month, 0),
+    ).getUTCDate();
+    const jsFirstDay = new Date(
+      Date.UTC(info.year, info.month - 1, 1),
+    ).getUTCDay();
     const mondayFirstIndex = (jsFirstDay + 6) % 7;
 
     DAY_IDS.forEach(function (id, index) {
@@ -328,116 +394,65 @@
       headline.style.setProperty(
         "color",
         selected ? "rgb(164, 107, 97)" : "rgb(255, 255, 255)",
-        "important"
+        "important",
       );
-      headline.style.setProperty("font-weight", selected ? "700" : "400", "important");
+      headline.style.setProperty(
+        "font-weight",
+        selected ? "700" : "400",
+        "important",
+      );
     });
 
     /* =====================================================
    ĐẶT TRÁI TIM ĐÚNG NGÀY CƯỚI
    ===================================================== */
 
-const selectedCell =
-  mondayFirstIndex +
-  info.day -
-  1;
+    const selectedCell = mondayFirstIndex + info.day - 1;
 
-const selectedRow =
-  Math.floor(
-    selectedCell / 7
-  );
+    const selectedRow = Math.floor(selectedCell / 7);
 
-const selectedCol =
-  selectedCell % 7;
+    const selectedCol = selectedCell % 7;
 
-const marker =
-  document.getElementById(
-    "SHAPE1"
-  );
+    const marker = document.getElementById("SHAPE1");
 
-if (
-  marker &&
-  ROW_TOP[selectedRow] !==
-    undefined &&
-  COL_LEFT[selectedCol] !==
-    undefined
-) {
+    if (
+      marker &&
+      ROW_TOP[selectedRow] !== undefined &&
+      COL_LEFT[selectedCol] !== undefined
+    ) {
+      /* Canh giữa tim trong ô ngày */
+      const markerLeft = COL_LEFT[selectedCol] + 6.2;
 
-  /* Canh giữa tim trong ô ngày */
-  const markerLeft =
-    COL_LEFT[selectedCol] +
-    6.2;
+      const markerTop = ROW_TOP[selectedRow] - 6;
 
-  const markerTop =
-    ROW_TOP[selectedRow] -
-    6;
+      marker.style.setProperty("left", markerLeft + "px", "important");
 
-  marker.style.setProperty(
-    "left",
-    markerLeft + "px",
-    "important"
-  );
+      marker.style.setProperty("top", markerTop + "px", "important");
 
-  marker.style.setProperty(
-    "top",
-    markerTop + "px",
-    "important"
-  );
+      marker.style.setProperty("display", "block", "important");
 
-  marker.style.setProperty(
-    "display",
-    "block",
-    "important"
-  );
+      marker.style.setProperty("z-index", "1", "important");
 
-  marker.style.setProperty(
-    "z-index",
-    "1",
-    "important"
-  );
-
-
-  /* ==========================
+      /* ==========================
      Đưa số ngày cưới lên trên tim
      ========================== */
 
-  const selectedDayId =
-    DAY_IDS[
-      info.day - 1
-    ];
+      const selectedDayId = DAY_IDS[info.day - 1];
 
-  const selectedDay =
-    document.getElementById(
-      selectedDayId
-    );
+      const selectedDay = document.getElementById(selectedDayId);
 
-  const selectedHeadline =
-    q(selectedDayId);
+      const selectedHeadline = q(selectedDayId);
 
-  if (selectedDay) {
+      if (selectedDay) {
+        selectedDay.style.setProperty("z-index", "2", "important");
+      }
 
-    selectedDay.style.setProperty(
-      "z-index",
-      "2",
-      "important"
-    );
-  }
+      if (selectedHeadline) {
+        selectedHeadline.style.setProperty("color", "#a46b61", "important");
 
-  if (selectedHeadline) {
-
-    selectedHeadline.style.setProperty(
-      "color",
-      "#a46b61",
-      "important"
-    );
-
-    selectedHeadline.style.setProperty(
-      "font-weight",
-      "700",
-      "important"
-    );
-  }
-}
+        selectedHeadline.style.setProperty("font-weight", "700", "important");
+      }
+    }
   }
 
   function applyAlbumAndThanks() {
@@ -446,10 +461,6 @@ if (
       if (c.album.second) setText("HEADLINE108", c.album.second);
     }
 
-    if (c.thankYouTitle) {
-      setHtml("HEADLINE100", c.thankYouTitle + "<br>");
-      setText("HEADLINE90", c.thankYouTitle);
-    }
     if (c.thankYouText) setHtml("HEADLINE86", c.thankYouText + "<br>");
     if (c.signoff) setHtml("HEADLINE87", c.signoff + "<br>");
   }
@@ -462,7 +473,7 @@ if (
     setImage("IMAGE16", images.calendar);
     setImage("IMAGE54", images.albumIntro);
     setImage("IMAGE55", images.albumCover);
-    setImage("IMAGE43", images.footer );
+    setImage("IMAGE43", images.footer);
   }
 
   /* =========================================================
@@ -472,11 +483,13 @@ if (
     const sourceMusic = c.music || {};
     const m = {
       enabled: sourceMusic.enabled !== false,
-      track: asText(sourceMusic.track).trim() || "https://files.catbox.moe/bcba42.mp3",
+      track:
+        asText(sourceMusic.track).trim() ||
+        "https://files.catbox.moe/bcba42.mp3",
       fallbackTrack: asText(sourceMusic.fallbackTrack).trim(),
       volume: sourceMusic.volume === undefined ? 0.65 : sourceMusic.volume,
       loop: sourceMusic.loop !== false,
-      startOnFirstGesture: sourceMusic.startOnFirstGesture !== false
+      startOnFirstGesture: sourceMusic.startOnFirstGesture !== false,
     };
     const enabled = m.enabled !== false;
     const primaryTrack = asText(m.track).trim();
@@ -496,7 +509,9 @@ if (
     audio.playsInline = true;
 
     const volume = Number(m.volume);
-    audio.volume = Number.isFinite(volume) ? Math.max(0, Math.min(1, volume)) : 0.65;
+    audio.volume = Number.isFinite(volume)
+      ? Math.max(0, Math.min(1, volume))
+      : 0.65;
     audio.src = primaryTrack;
 
     const button = document.createElement("button");
@@ -507,8 +522,8 @@ if (
     button.title = "Bật nhạc";
     button.innerHTML =
       '<svg id="music-icon" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">' +
-        '<path d="M42 9.5c1.2-.35 2.4.55 2.4 1.8v27.15c0 5.15-4.35 9.35-9.7 9.35-4.65 0-8.4-3.1-8.4-6.95s3.75-6.95 8.4-6.95c1.75 0 3.4.45 4.75 1.25V21.2l-18.9 5.35v19.1c0 5.15-4.35 9.35-9.7 9.35-4.65 0-8.4-3.1-8.4-6.95s3.75-6.95 8.4-6.95c1.75 0 3.4.45 4.75 1.25V20.3c0-1.05.7-2 1.7-2.3L42 9.5Z"></path>' +
-        '<path d="M51.7 18.2c1.1-2 4-2 5.1 0 .65 1.2.45 2.7-.55 3.7l-4.55 4.45-4.55-4.45c-1-.95-1.2-2.5-.55-3.7 1.1-2 4-2 5.1 0Z" opacity="0.9"></path>' +
+      '<path d="M42 9.5c1.2-.35 2.4.55 2.4 1.8v27.15c0 5.15-4.35 9.35-9.7 9.35-4.65 0-8.4-3.1-8.4-6.95s3.75-6.95 8.4-6.95c1.75 0 3.4.45 4.75 1.25V21.2l-18.9 5.35v19.1c0 5.15-4.35 9.35-9.7 9.35-4.65 0-8.4-3.1-8.4-6.95s3.75-6.95 8.4-6.95c1.75 0 3.4.45 4.75 1.25V20.3c0-1.05.7-2 1.7-2.3L42 9.5Z"></path>' +
+      '<path d="M51.7 18.2c1.1-2 4-2 5.1 0 .65 1.2.45 2.7-.55 3.7l-4.55 4.45-4.55-4.45c-1-.95-1.2-2.5-.55-3.7 1.1-2 4-2 5.1 0Z" opacity="0.9"></path>' +
       '</svg><span id="music-slash"></span>';
 
     document.body.appendChild(audio);
@@ -557,7 +572,11 @@ if (
     audio.addEventListener("pause", syncButton);
 
     audio.addEventListener("error", function () {
-      if (!fallbackUsed && fallbackTrack && audio.src !== absoluteUrl(fallbackTrack)) {
+      if (
+        !fallbackUsed &&
+        fallbackTrack &&
+        audio.src !== absoluteUrl(fallbackTrack)
+      ) {
         fallbackUsed = true;
         audio.src = fallbackTrack;
         return;
@@ -572,7 +591,10 @@ if (
         if (button.contains(event.target)) return;
         playMusic();
       };
-      document.addEventListener("pointerdown", firstGesture, { once: true, passive: true });
+      document.addEventListener("pointerdown", firstGesture, {
+        once: true,
+        passive: true,
+      });
     }
 
     syncButton();
@@ -590,24 +612,30 @@ if (
   }
 
   function getGallerySources(gallery) {
-    const configured = c.images && Array.isArray(c.images.gallery)
-      ? c.images.gallery.filter(function (src) {
-          return typeof src === "string" && src.trim() !== "";
-        }).map(function (src) {
-          return src.trim();
-        })
-      : [];
+    const configured =
+      c.images && Array.isArray(c.images.gallery)
+        ? c.images.gallery
+            .filter(function (src) {
+              return typeof src === "string" && src.trim() !== "";
+            })
+            .map(function (src) {
+              return src.trim();
+            })
+        : [];
 
     if (configured.length) return configured;
 
     const sources = [];
-    gallery.querySelectorAll(".ladi-gallery-view-item").forEach(function (item) {
-      item.classList.remove("ladi-lazyload");
-      const inlineBg = item.style.backgroundImage;
-      const computedBg = window.getComputedStyle(item).backgroundImage;
-      const src = parseBackgroundUrl(inlineBg) || parseBackgroundUrl(computedBg);
-      if (src) sources.push(src);
-    });
+    gallery
+      .querySelectorAll(".ladi-gallery-view-item")
+      .forEach(function (item) {
+        item.classList.remove("ladi-lazyload");
+        const inlineBg = item.style.backgroundImage;
+        const computedBg = window.getComputedStyle(item).backgroundImage;
+        const src =
+          parseBackgroundUrl(inlineBg) || parseBackgroundUrl(computedBg);
+        if (src) sources.push(src);
+      });
     return sources;
   }
 
@@ -622,21 +650,31 @@ if (
 
     const sources = getGallerySources(gallery);
     if (!sources.length) {
-      console.warn("Wedding gallery: không tìm thấy ảnh gallery trong config hoặc HTML.");
+      console.warn(
+        "Wedding gallery: không tìm thấy ảnh gallery trong config hoặc HTML.",
+      );
       return;
     }
 
     gallery.dataset.weddingGalleryReady = "1";
 
-    view.querySelectorAll(".ladi-gallery-view-item").forEach(function (el) { el.remove(); });
-    controlBox.querySelectorAll(".ladi-gallery-control-item").forEach(function (el) { el.remove(); });
+    view.querySelectorAll(".ladi-gallery-view-item").forEach(function (el) {
+      el.remove();
+    });
+    controlBox
+      .querySelectorAll(".ladi-gallery-control-item")
+      .forEach(function (el) {
+        el.remove();
+      });
 
     const prevButton = view.querySelector(".ladi-gallery-view-arrow-left");
     const nextButton = view.querySelector(".ladi-gallery-view-arrow-right");
 
-    control.querySelectorAll(".ladi-gallery-control-arrow").forEach(function (arrow) {
-      arrow.style.setProperty("display", "none", "important");
-    });
+    control
+      .querySelectorAll(".ladi-gallery-control-arrow")
+      .forEach(function (arrow) {
+        arrow.style.setProperty("display", "none", "important");
+      });
 
     const viewItems = [];
     const thumbs = [];
@@ -672,8 +710,12 @@ if (
       const promise = new Promise(function (resolve, reject) {
         const img = new Image();
         img.decoding = "async";
-        img.onload = function () { resolve(sources[index]); };
-        img.onerror = function () { reject(new Error("Không tải được " + sources[index])); };
+        img.onload = function () {
+          resolve(sources[index]);
+        };
+        img.onerror = function () {
+          reject(new Error("Không tải được " + sources[index]));
+        };
         img.src = sources[index];
       }).catch(function (err) {
         failed.add(index);
@@ -708,9 +750,17 @@ if (
       const show = activeCount() > 1;
       [prevButton, nextButton].filter(Boolean).forEach(function (button) {
         button.classList.remove("opacity-0");
-        button.style.setProperty("display", show ? "block" : "none", "important");
+        button.style.setProperty(
+          "display",
+          show ? "block" : "none",
+          "important",
+        );
         button.style.setProperty("opacity", show ? "1" : "0", "important");
-        button.style.setProperty("visibility", show ? "visible" : "hidden", "important");
+        button.style.setProperty(
+          "visibility",
+          show ? "visible" : "hidden",
+          "important",
+        );
       });
     }
 
@@ -718,7 +768,8 @@ if (
       const thumb = thumbs[index];
       if (!thumb || thumb.style.display === "none") return;
 
-      const target = thumb.offsetLeft - control.clientWidth / 2 + thumb.offsetWidth / 2;
+      const target =
+        thumb.offsetLeft - control.clientWidth / 2 + thumb.offsetWidth / 2;
       if (typeof control.scrollTo === "function") {
         control.scrollTo({ left: Math.max(0, target), behavior: "smooth" });
       } else {
@@ -731,7 +782,11 @@ if (
       viewItems.forEach(function (item, i) {
         const active = i === index;
         item.classList.toggle("selected", active);
-        item.style.setProperty("display", active ? "block" : "none", "important");
+        item.style.setProperty(
+          "display",
+          active ? "block" : "none",
+          "important",
+        );
         item.style.setProperty("left", "0", "important");
         item.style.setProperty("top", "0", "important");
         item.style.setProperty("transform", "none", "important");
@@ -748,7 +803,10 @@ if (
     }
 
     function canPrefetch() {
-      const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+      const connection =
+        navigator.connection ||
+        navigator.mozConnection ||
+        navigator.webkitConnection;
       if (!connection) return true;
       if (connection.saveData) return false;
       return !/2g|3g/.test(connection.effectiveType || "");
@@ -760,7 +818,9 @@ if (
       if (next < 0 || next === index) return;
 
       const work = function () {
-        loadSource(next).catch(function () { updateArrows(); });
+        loadSource(next).catch(function () {
+          updateArrows();
+        });
       };
 
       if ("requestIdleCallback" in window) {
@@ -783,7 +843,7 @@ if (
           viewItems[index].style.setProperty(
             "background-image",
             'url("' + cssUrl(src) + '")',
-            "important"
+            "important",
           );
           renderCurrent(index, scrollThumb);
           prefetchNext(index);
@@ -815,27 +875,34 @@ if (
     });
 
     if ("IntersectionObserver" in window) {
-      const thumbObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          const thumb = entry.target;
-          const index = Number(thumb.dataset.index);
+      const thumbObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            const thumb = entry.target;
+            const index = Number(thumb.dataset.index);
 
-          loadSource(index)
-            .then(function (src) {
-              thumb.style.setProperty(
-                "background-image",
-                'url("' + cssUrl(src) + '")',
-                "important"
-              );
-            })
-            .catch(function () { updateArrows(); });
+            loadSource(index)
+              .then(function (src) {
+                thumb.style.setProperty(
+                  "background-image",
+                  'url("' + cssUrl(src) + '")',
+                  "important",
+                );
+              })
+              .catch(function () {
+                updateArrows();
+              });
 
-          thumbObserver.unobserve(thumb);
-        });
-      }, { root: control, rootMargin: "0px 180px", threshold: 0.01 });
+            thumbObserver.unobserve(thumb);
+          });
+        },
+        { root: control, rootMargin: "0px 180px", threshold: 0.01 },
+      );
 
-      thumbs.forEach(function (thumb) { thumbObserver.observe(thumb); });
+      thumbs.forEach(function (thumb) {
+        thumbObserver.observe(thumb);
+      });
     } else {
       thumbs.forEach(function (thumb, index) {
         loadSource(index)
@@ -843,7 +910,7 @@ if (
             thumb.style.setProperty(
               "background-image",
               'url("' + cssUrl(src) + '")',
-              "important"
+              "important",
             );
           })
           .catch(function () {});
@@ -873,299 +940,170 @@ if (
     let touchStartX = null;
     let touchStartY = null;
 
-    view.addEventListener("touchstart", function (event) {
-      if (!event.touches || !event.touches.length) return;
-      touchStartX = event.touches[0].clientX;
-      touchStartY = event.touches[0].clientY;
-    }, { passive: true });
+    view.addEventListener(
+      "touchstart",
+      function (event) {
+        if (!event.touches || !event.touches.length) return;
+        touchStartX = event.touches[0].clientX;
+        touchStartY = event.touches[0].clientY;
+      },
+      { passive: true },
+    );
 
-    view.addEventListener("touchend", function (event) {
-      if (
-        touchStartX === null || touchStartY === null ||
-        !event.changedTouches || !event.changedTouches.length
-      ) {
+    view.addEventListener(
+      "touchend",
+      function (event) {
+        if (
+          touchStartX === null ||
+          touchStartY === null ||
+          !event.changedTouches ||
+          !event.changedTouches.length
+        ) {
+          touchStartX = null;
+          touchStartY = null;
+          return;
+        }
+
+        const endX = event.changedTouches[0].clientX;
+        const endY = event.changedTouches[0].clientY;
+        const dx = endX - touchStartX;
+        const dy = endY - touchStartY;
         touchStartX = null;
         touchStartY = null;
-        return;
-      }
 
-      const endX = event.changedTouches[0].clientX;
-      const endY = event.changedTouches[0].clientY;
-      const dx = endX - touchStartX;
-      const dy = endY - touchStartY;
-      touchStartX = null;
-      touchStartY = null;
-
-      if (Math.abs(dx) < 45 || Math.abs(dx) <= Math.abs(dy)) return;
-      if (dx < 0) showSlide(currentIndex + 1, 1, true);
-      else showSlide(currentIndex - 1, -1, true);
-    }, { passive: true });
+        if (Math.abs(dx) < 45 || Math.abs(dx) <= Math.abs(dy)) return;
+        if (dx < 0) showSlide(currentIndex + 1, 1, true);
+        else showSlide(currentIndex - 1, -1, true);
+      },
+      { passive: true },
+    );
 
     gallery.style.visibility = "visible";
     updateArrows();
     showSlide(0, 1, false);
   }
 
- /* =========================================================
+  /* =========================================================
    COUNTDOWN NGÀY CƯỚI
    ========================================================= */
 
-function initWeddingCountdown() {
+  function initWeddingCountdown() {
+    const w = c.wedding || {};
 
-  const w =
-    c.wedding || {};
+    const daysEl = document.getElementById("countdown-days");
 
-  const daysEl =
-    document.getElementById(
-      "countdown-days"
-    );
+    const hoursEl = document.getElementById("countdown-hours");
 
-  const hoursEl =
-    document.getElementById(
-      "countdown-hours"
-    );
+    const minutesEl = document.getElementById("countdown-minutes");
 
-  const minutesEl =
-    document.getElementById(
-      "countdown-minutes"
-    );
+    const secondsEl = document.getElementById("countdown-seconds");
 
-  const secondsEl =
-    document.getElementById(
-      "countdown-seconds"
-    );
+    const countdown = document.getElementById("wedding-countdown");
 
-  const countdown =
-    document.getElementById(
-      "wedding-countdown"
-    );
+    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
+      return;
+    }
 
-
-  if (
-    !daysEl ||
-    !hoursEl ||
-    !minutesEl ||
-    !secondsEl
-  ) {
-    return;
-  }
-
-
-  /*
+    /*
     Ưu tiên countdownTo vì có timezone
     rõ ràng.
   */
-  let target = null;
+    let target = null;
 
-
-  if (w.countdownTo) {
-
-    target =
-      new Date(
-        w.countdownTo
-      );
-
-  } else {
-
-    /*
+    if (w.countdownTo) {
+      target = new Date(w.countdownTo);
+    } else {
+      /*
       Fallback nếu chưa khai báo
       countdownTo.
     */
-    const year =
-      parseInt(
-        w.year,
-        10
-      );
+      const year = parseInt(w.year, 10);
 
-    const month =
-      parseInt(
-        w.month,
-        10
-      );
+      const month = parseInt(w.month, 10);
 
-    const day =
-      parseInt(
-        w.day,
-        10
-      );
+      const day = parseInt(w.day, 10);
 
+      let hour = 0;
+      let minute = 0;
 
-    let hour = 0;
-    let minute = 0;
+      if (w.time) {
+        const parts = String(w.time).split(":");
 
+        hour = parseInt(parts[0], 10) || 0;
 
-    if (w.time) {
+        minute = parseInt(parts[1], 10) || 0;
+      }
 
-      const parts =
-        String(
-          w.time
-        ).split(":");
-
-      hour =
-        parseInt(
-          parts[0],
-          10
-        ) || 0;
-
-      minute =
-        parseInt(
-          parts[1],
-          10
-        ) || 0;
+      target = new Date(year, month - 1, day, hour, minute, 0);
     }
 
-
-    target =
-      new Date(
-        year,
-        month - 1,
-        day,
-        hour,
-        minute,
-        0
-      );
-  }
-
-
-  if (
-    !target ||
-    Number.isNaN(
-      target.getTime()
-    )
-  ) {
-
-    console.warn(
-      "Countdown: ngày cưới không hợp lệ."
-    );
-
-    return;
-  }
-
-
-  const pad = (number) =>
-    String(number).padStart(
-      2,
-      "0"
-    );
-
-
-  let timer = null;
-
-
-  function update() {
-
-    const now =
-      Date.now();
-
-    let difference =
-      target.getTime() -
-      now;
-
-
-    /*
-      Đã tới ngày cưới
-    */
-    if (
-      difference <= 0
-    ) {
-
-      daysEl.textContent =
-        "00";
-
-      hoursEl.textContent =
-        "00";
-
-      minutesEl.textContent =
-        "00";
-
-      secondsEl.textContent =
-        "00";
-
-
-      if (countdown) {
-
-        countdown.setAttribute(
-          "aria-label",
-          "Ngày hạnh phúc đã đến"
-        );
-      }
-
-
-      if (timer) {
-        clearInterval(
-          timer
-        );
-      }
+    if (!target || Number.isNaN(target.getTime())) {
+      console.warn("Countdown: ngày cưới không hợp lệ.");
 
       return;
     }
 
+    const pad = (number) => String(number).padStart(2, "0");
 
-    const days =
-      Math.floor(
-        difference /
-        86400000
-      );
+    let timer = null;
 
+    function update() {
+      const now = Date.now();
 
-    difference %=
-      86400000;
+      let difference = target.getTime() - now;
 
+      /*
+      Đã tới ngày cưới
+    */
+      if (difference <= 0) {
+        daysEl.textContent = "00";
 
-    const hours =
-      Math.floor(
-        difference /
-        3600000
-      );
+        hoursEl.textContent = "00";
 
+        minutesEl.textContent = "00";
 
-    difference %=
-      3600000;
+        secondsEl.textContent = "00";
 
+        if (countdown) {
+          countdown.setAttribute("aria-label", "Ngày hạnh phúc đã đến");
+        }
 
-    const minutes =
-      Math.floor(
-        difference /
-        60000
-      );
+        if (timer) {
+          clearInterval(timer);
+        }
 
+        return;
+      }
 
-    difference %=
-      60000;
+      const days = Math.floor(difference / 86400000);
 
+      difference %= 86400000;
 
-    const seconds =
-      Math.floor(
-        difference /
-        1000
-      );
+      const hours = Math.floor(difference / 3600000);
 
+      difference %= 3600000;
 
-    daysEl.textContent =
-      String(days);
+      const minutes = Math.floor(difference / 60000);
 
-    hoursEl.textContent =
-      pad(hours);
+      difference %= 60000;
 
-    minutesEl.textContent =
-      pad(minutes);
+      const seconds = Math.floor(difference / 1000);
 
-    secondsEl.textContent =
-      pad(seconds);
+      daysEl.textContent = String(days);
+
+      hoursEl.textContent = pad(hours);
+
+      minutesEl.textContent = pad(minutes);
+
+      secondsEl.textContent = pad(seconds);
+    }
+
+    update();
+
+    timer = setInterval(update, 1000);
   }
 
-
-  update();
-
-
-  timer =
-    setInterval(
-      update,
-      1000
-    );
-}
-
- function apply() {
+  function apply() {
     revealElements();
     applyMetadata();
     applyCouple();
@@ -1182,7 +1120,7 @@ function initWeddingCountdown() {
     apply();
     initDynamicGallery();
     initMusic();
-	initWeddingCountdown();
+    initWeddingCountdown();
   }
 
   if (document.readyState === "loading") {
