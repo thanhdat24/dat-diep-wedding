@@ -1,15 +1,12 @@
 window.WEDDING_CONFIG = {
-  version: "2.7.0",
+  version: "2.8.1",
 
   site: {
-    title: "Thiệp cưới Thành Đạt & Ngọc Diệp | 17.11.2026",
+    title: "Thiệp cưới Thành Đạt & Ngọc Diệp | 16.11.2026",
     description:
-      "Trân trọng mời bạn đến chung vui trong lễ vu quy của Thành Đạt và Ngọc Diệp vào ngày 17/11/2026 tại TRUNG TÂM HỘI NGHỊ TIỆC CƯỚI VẠN PHÁT RIVERSIDE (Sảnh 3)",
+      "Trân trọng mời bạn đến chung vui trong lễ vu quy của Thành Đạt và Ngọc Diệp vào ngày 16/11/2026 tại 257 ấp Tân Hòa A, xã Tân Hiệp, tỉnh An Giang.",
 
-    // Sau khi deploy Vercel, điền URL thật vào đây.
-    // Ví dụ: "https://dat-diep-wedding.vercel.app"
-    url: "https://wedding-tone-hong.vercel.app/",
-
+    url: "https://dat-diep-wedding.vercel.app/",
     image: "",
   },
 
@@ -38,7 +35,7 @@ window.WEDDING_CONFIG = {
     venueLabel: "Địa điểm",
     venue: "257 ấp tân hòa a, xã tân hiệp, tỉnh an giang",
     directions: "Chỉ đường",
-    countdownTo: "2026-11-16T17:30:00+07:00",
+    countdownTo: "2026-11-16T10:00:00+07:00",
     // mapUrl: "https://maps.app.goo.gl/yVmR2QHrD4ACBni57",
     mapUrl:
       "https://www.google.com/maps/place/10%C2%B007'43.0%22N+105%C2%B016'16.0%22E/@10.1286144,105.2711038,820m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d10.1286144!4d105.2711038?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
@@ -76,8 +73,8 @@ window.WEDDING_CONFIG = {
     Gallery nếu để [] sẽ tự lấy các ảnh gallery có sẵn trong index.html.
   */
   images: {
-    cover: "",
-    invitation: "",
+    cover: "assets/images/cover.webp",
+    invitation: "assets/images/invitation.webp",
     calendar: "",
     albumIntro: "",
     albumCover: "",
