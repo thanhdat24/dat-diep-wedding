@@ -122,10 +122,7 @@ width: 408.245px;
       left: -23px;
 }
 
-#IMAGE5>.ladi-image>.ladi-image-background,
-#IMAGE43>.ladi-image>.ladi-image-background {
-background-image: url("../assets/images/footer.webp") !important;
-}
+
 
 #IMAGE5>.ladi-image {
 border-bottom-right-radius: 150px;
@@ -1287,68 +1284,4 @@ background-image:
     #IMAGE43>.ladi-image>.ladi-image-background {
 background-image:
         url("../assets/images/footer.webp") !important;
-}
-
-/* =========================================================
-     GALLERY
-     ========================================================= */
-
-    #GALLERY2 .ladi-gallery-view-item[data-index="0"],
-#GALLERY2 .ladi-gallery-control-item[data-index="0"] {
-background-image:
-        url("../assets/images/gallery-1.webp") !important;
-}
-
-#GALLERY2 .ladi-gallery-view-item[data-index="1"],
-#GALLERY2 .ladi-gallery-control-item[data-index="1"] {
-background-image:
-        url("../assets/images/gallery-2.webp") !important;
-}
-
-#GALLERY2 .ladi-gallery-view-item[data-index="2"],
-#GALLERY2 .ladi-gallery-control-item[data-index="2"] {
-background-image:
-        url("../assets/images/gallery-3.webp") !important;
-}
-
-#GALLERY2 .ladi-gallery-view-item[data-index="3"],
-#GALLERY2 .ladi-gallery-control-item[data-index="3"] {
-background-image:
-        url("../assets/images/gallery-4.webp") !important;
-}
-
-#GALLERY2 .ladi-gallery-view-item[data-index="4"],
-#GALLERY2 .ladi-gallery-control-item[data-index="4"] {
-background-image:
-        url("../assets/images/gallery-5.webp") !important;
-}
-
-#GALLERY2 .ladi-gallery-view-item[data-index="5"],
-#GALLERY2 .ladi-gallery-control-item[data-index="5"] {
-background-image:
-        url("../assets/images/gallery-6.webp") !important;
-}
-
-#GALLERY2 .ladi-gallery-view-item[data-index="6"],
-#GALLERY2 .ladi-gallery-control-item[data-index="6"] {
-background-image:
-        url("../assets/images/gallery-7.webp") !important;
-}
-
-#GALLERY2 .ladi-gallery-view-item[data-index="7"],
-#GALLERY2 .ladi-gallery-control-item[data-index="7"] {
-background-image:
-        url("../assets/images/gallery-8.webp") !important;
-}
-
-#GALLERY2 .ladi-gallery-view-item[data-index="8"],
-#GALLERY2 .ladi-gallery-control-item[data-index="8"] {
-background-image:
-        url("../assets/images/gallery-9.webp") !important;
-}
-
-#GALLERY2 .ladi-gallery-view-item[data-index="9"],
-#GALLERY2 .ladi-gallery-control-item[data-index="9"] {
-background-image:
-        url("../assets/images/gallery-10.webp") !important;
 }
