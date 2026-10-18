@@ -1489,3 +1489,40 @@ body {
     animation: none !important;
   }
 }
+
+
+/* ======================================
+   FIX TRAI TIM TREN IPHONE
+   Khong thay doi giao dien may tinh
+====================================== */
+
+@media screen and (max-width: 767px) {
+
+  /* Ep Safari hien trai tim dang chu,
+     khong phai emoji 3D */
+  #IMAGE47::before {
+    content: "\2665\FE0E" !important;
+
+    font-family: Georgia, "Times New Roman",
+      serif !important;
+
+    font-variant-emoji: text;
+    color: #B76D7C !important;
+    -webkit-text-fill-color: #B76D7C !important;
+
+    line-height: 1 !important;
+  }
+
+  /* Ha nhan xuong de khong che trai tim */
+  #IMAGE47 .dd-heart-hint {
+    top: auto !important;
+    bottom: -20px !important;
+    left: 50% !important;
+
+    transform: translateX(-50%) !important;
+    z-index: 10 !important;
+
+    white-space: nowrap !important;
+  }
+
+}
