@@ -1491,38 +1491,36 @@ body {
 }
 
 
-/* ======================================
-   FIX TRAI TIM TREN IPHONE
-   Khong thay doi giao dien may tinh
-====================================== */
+/* FIX HINH DANG TRAI TIM TREN IPHONE */
+/* Khong thay doi giao dien desktop */
 
 @media screen and (max-width: 767px) {
 
-  /* Ep Safari hien trai tim dang chu,
-     khong phai emoji 3D */
   #IMAGE47::before {
-    content: "\2665\FE0E" !important;
+    /* Dung hinh vector thay cho font emoji */
+    content: "" !important;
 
-    font-family: Georgia, "Times New Roman",
-      serif !important;
+    position: absolute !important;
+    inset: auto !important;
 
-    font-variant-emoji: text;
-    color: #B76D7C !important;
-    -webkit-text-fill-color: #B76D7C !important;
+    top: 10% !important;
+    left: 7% !important;
 
-    line-height: 1 !important;
-  }
+    width: 86% !important;
+    height: 80% !important;
 
-  /* Ha nhan xuong de khong che trai tim */
-  #IMAGE47 .dd-heart-hint {
-    top: auto !important;
-    bottom: -20px !important;
-    left: 50% !important;
+    display: block !important;
 
-    transform: translateX(-50%) !important;
-    z-index: 10 !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 180'%3E%3Cpath fill='%23B76D7C' d='M100 168 C86 157 11 114 10 64 C9 35 30 14 57 14 C78 14 92 25 100 39 C108 25 122 14 143 14 C170 14 191 35 190 64 C189 114 114 157 100 168Z'/%3E%3C/svg%3E") !important;
 
-    white-space: nowrap !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+
+    color: transparent !important;
+    text-shadow: none !important;
+
+    pointer-events: none !important;
   }
 
 }
