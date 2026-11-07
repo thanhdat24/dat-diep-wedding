@@ -182,7 +182,7 @@
     const description =
       asText(site.description).trim() ||
       (groom || bride
-        ? "Trân trọng kính mời bạn đến chung vui cùng " +
+        ? "Hân hạnh được đón tiếp bạn trong ngày vui của " +
           groom +
           (groom && bride ? " & " : "") +
           bride +
