@@ -19,6 +19,8 @@ body{
   width:420px!important;
   max-width:none!important;
   margin:0!important;
+  /* min-height:100% cua base + chieu cao shell tao vong lap khi scale>1 */
+  min-height:0!important;
   transform-origin:top left!important;
   backface-visibility:hidden;
   -webkit-backface-visibility:hidden;
@@ -30,4 +32,45 @@ body{
     transition-duration:.001ms!important;
     scroll-behavior:auto!important;
   }
+}
+
+/* =========================================================
+   V2.8.2 - iPhone 17 tro di (402 / 420 / 440px) va may moi hon
+   Toa do ben duoi la toa do canvas 420px, JS tu scale theo man hinh.
+   ========================================================= */
+
+/* Chuyen tinh: anh IMAGE14 de len 25px cuoi doan chu.
+   Noi SECTION1 de doan chu 8-9 dong khong bi che. */
+#SECTION1{
+  height:calc(1046.6px + 48px)!important;
+}
+
+/* Dia chi: giu tren 1 dong de khong de len duong ke LINE3. */
+#HEADLINE80{
+  width:404px!important;
+  left:8px!important;
+}
+#HEADLINE80>.ladi-headline{
+  font-size:12.6px!important;
+}
+
+/* Lich: thang 6 hang (11/2026) lam so 30 sat mep khung nau. */
+#BOX3{
+  height:347px!important;
+}
+
+/* Popup: tranh tai tho / Dynamic Island / thanh Home khi xoay ngang. */
+#dd-love-overlay{
+  padding:
+    max(16px,env(safe-area-inset-top))
+    max(16px,env(safe-area-inset-right))
+    max(16px,env(safe-area-inset-bottom))
+    max(16px,env(safe-area-inset-left))!important;
+}
+#dd-love-popup{
+  max-height:calc(
+    100dvh
+    - max(16px,env(safe-area-inset-top))
+    - max(16px,env(safe-area-inset-bottom))
+  )!important;
 }

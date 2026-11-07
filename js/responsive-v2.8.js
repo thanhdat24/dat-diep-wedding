@@ -2,6 +2,9 @@
   "use strict";
 
   var DESIGN_WIDTH=420;
+  /* Rong hon muc nay la tablet / may tinh / dien thoai xoay ngang:
+     giu canvas 420px 1:1 o giua, khong phong anh. */
+  var MAX_PHONE_WIDTH=500;
   var wrapper=null;
   var shell=null;
   var ro=null;
@@ -27,7 +30,7 @@
     if(!wrapper||!shell)return;
 
     var vw=document.documentElement.clientWidth||window.innerWidth||DESIGN_WIDTH;
-    var scale=Math.min(1,vw/DESIGN_WIDTH);
+    var scale=vw<=MAX_PHONE_WIDTH?vw/DESIGN_WIDTH:1;
     var rendered=DESIGN_WIDTH*scale;
     var left=Math.max(0,(vw-rendered)/2);
 
