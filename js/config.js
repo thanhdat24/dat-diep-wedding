@@ -4,7 +4,7 @@ window.WEDDING_CONFIG = {
   site: {
     title: "Thiệp cưới Thành Đạt & Ngọc Diệp | 17.11.2026",
     description:
-      "Trân trọng mời bạn đến chung vui trong lễ tân hôn của Thành Đạt và Ngọc Diệp vào ngày 17/11/2026 tại Trân trọng mời bạn đến chung vui trong lễ tân hôn của Thành Đạt & Ngọc Diệp vào ngày 17/11/2026 tại Trung tâm Hội nghị Tiệc cưới Vạn Phát Riverside (Sảnh 3)",
+      "Hân hạnh được đón tiếp bạn trong ngày vui của Thành Đạt & Ngọc Diệp.",
 
     url: "https://dat-diep-wedding.vercel.app/",
     image: "",
@@ -36,7 +36,7 @@ window.WEDDING_CONFIG = {
     venue:
       "Vạn Phát Riverside (Sảnh 3)\n 02 Nguyễn Văn Cừ, Cồn Khương, P. Cái Khế, TP. Cần Thơ.",
     directions: "CHỈ ĐƯỜNG",
-    countdownTo: "2026-11-16T10:00:00+07:00",
+    countdownTo: "2026-11-17T17:00:00+07:00",
     // mapUrl: "https://maps.app.goo.gl/yVmR2QHrD4ACBni57",
     mapUrl: "https://maps.app.goo.gl/uU7umZEhXyDhzBYZ8",
   },
