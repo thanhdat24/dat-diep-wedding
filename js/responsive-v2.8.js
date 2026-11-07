@@ -26,6 +26,22 @@
     return true;
   }
 
+  /* Messenger/Zalo tren Android co the phong chu theo co chu he thong,
+     khong chan duoc bang text-size-adjust. Canvas co dinh nen chu to hon
+     khung se vo dong: do ti le phong roi bu nguoc qua --text-zoom-fix. */
+  function fixTextZoom(){
+    var probe=document.createElement("span");
+    probe.textContent="M";
+    probe.style.cssText="position:absolute;visibility:hidden;display:block;";
+    probe.style.font="100px/1 Arial,sans-serif";
+    document.body.appendChild(probe);
+    var ratio=probe.offsetHeight/100;
+    probe.parentNode.removeChild(probe);
+    if(ratio>0&&Math.abs(ratio-1)>=.02){
+      document.documentElement.style.setProperty("--text-zoom-fix",String(1/ratio));
+    }
+  }
+
   function fit(){
     if(!wrapper||!shell)return;
 
@@ -52,6 +68,7 @@
 
   function start(){
     if(!ensureShell())return;
+    fixTextZoom();
     fit();
 
     if("ResizeObserver" in window){

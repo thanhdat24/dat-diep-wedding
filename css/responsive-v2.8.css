@@ -74,3 +74,27 @@ body{
     - max(16px,env(safe-area-inset-bottom))
   )!important;
 }
+
+/* =========================================================
+   V2.8.3 - Android in-app browser (Messenger, Zalo)
+   JS do ti le phong chu cua he thong; khong phong thi bien nay khong
+   duoc dat va zoom=1, khong anh huong iPhone / Safari / may tinh.
+   ========================================================= */
+.ladi-headline,
+.ladi-paragraph,
+.countdown-small,
+.countdown-title,
+.countdown-number,
+.countdown-label,
+.countdown-separator,
+.dd-heart-hint{
+  zoom:var(--text-zoom-fix,1);
+}
+
+/* Du phong: khung ngay chi vua khit, khong de 2026 gay thanh 202 / 6. */
+#HEADLINE91>.ladi-headline,
+#HEADLINE92>.ladi-headline,
+#HEADLINE93>.ladi-headline{
+  white-space:nowrap!important;
+  word-break:normal!important;
+}

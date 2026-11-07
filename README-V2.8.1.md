@@ -36,6 +36,7 @@ Bộ này dành cho cấu trúc website cưới V2.7 hiện tại.
 - Điện thoại dọc (rộng <= 500px): scale toàn trang vừa khít chiều rộng màn hình, kể cả máy rộng hơn 420px như iPhone 17 Pro Max (440px).
 - Tablet / máy tính / điện thoại xoay ngang (rộng > 500px): giữ 420px 1:1 ở giữa, không phóng ảnh làm giảm chất lượng.
 - Khi xoay màn hình: tự tính lại scale.
+- Messenger/Zalo trên Android phóng chữ theo cỡ chữ hệ thống: JS đo tỉ lệ và bù lại để chữ giữ đúng cỡ thiết kế, không vỡ dòng.
 - Không dùng `window.ladi_viewport()`, tránh double-scale trong Messenger/Zalo.
 
 ## Khôi phục
